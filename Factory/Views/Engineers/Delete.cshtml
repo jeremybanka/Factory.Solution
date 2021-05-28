@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+@model Factory.Models.Engineer
+<header>
+  <h1>
+    <span>ARE YOU</span>
+    <span>SURE?</span>
+  </h1>
+</header>
+<main>
+  @using (Html.BeginForm())
+  {
+    <input type="submit" value="Yes. Delete @Html.DisplayFor(model => model.Name)" />
+  }
+</main>
+<footer>
+  @Html.ActionLink("No", "Details", new {id = Model.EngineerId})
+</footer>

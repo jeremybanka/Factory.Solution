@@ -1,0 +1,33 @@
+@{
+  Layout = "_Layout";
+}
+@using Factory.Models
+@model Factory.Models.Engineer
+<header>
+  <h1>@Html.DisplayFor(model => model.Name)</h1>
+  <h2>Engineer</h2>
+</header>
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th>@Html.DisplayFor(model => model.Name)'s Licenses</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (License l in Model.Licenses)
+      {
+        <tr>
+          <td>@Html.ActionLink($"{@l.Machine.Name}", "Details", "Machines", new { id = l.Machine.MachineId})</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+
+</main>
+<footer>
+  <p>@Html.ActionLink("Edit", "Edit", new { id = Model.EngineerId })</p>
+  <p>@Html.ActionLink("Delete", "Delete", new { id = Model.EngineerId })</p>
+  <p>@Html.ActionLink("Back", "Index")</p>
+  </ footer>
