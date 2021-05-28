@@ -1,0 +1,95 @@
+:root {
+  --color-bg: black;
+  --color-tint: #fff1;
+}
+
+:root body {
+  background: var(--color-bg);
+}
+
+:root body * {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+:root body header {
+  font-size: 10vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+:root body header * {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+:root body header h1 {
+  margin-top: 9px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  display: inline;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 1.05em;
+  margin: auto;
+}
+
+:root body header h1 span {
+  margin-right: -6.4vmin;
+  padding: 0 3.2vmin;
+  background: black;
+  color: white;
+}
+
+:root body nav {
+  position: absolute;
+  top: 0px;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 8vmin;
+  overflow: hidden;
+}
+
+:root body nav > a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  background: #fff0;
+  color: white;
+}
+
+:root body nav > a:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  background: white;
+  color: black;
+}
+/*# sourceMappingURL=root.css.map */
