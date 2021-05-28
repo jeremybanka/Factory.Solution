@@ -1,0 +1,50 @@
+@{
+  Layout = "_Layout";
+}
+@using Factory.Models
+@model Factory.Models.Machine
+<header>
+  <h2>Edit Machine</h2>
+  <h3>@Html.DisplayFor(model => model.Name)</h3>
+</header>
+<main>
+
+  @using (Html.BeginForm(
+  "Create",
+  "Licenses",
+  new { MachineId = Model.MachineId, origin = ViewBag.Controller }
+  ))
+  {
+    @Html.HiddenFor(model => model.MachineId)
+    <label>LICENSE ENGINEER</label>
+    <input type="submit" value="License For" />
+    @Html.DropDownList("EngineerId")
+  }
+  <ul>
+    @foreach (License l in Model.Licenses)
+    {
+      <li>
+        @using (Html.BeginForm(
+       "Delete",
+       "Licenses",
+       new { id = l.LicenseId, origin = ViewBag.Controller }
+       ))
+        {
+          @l.Engineer.Name
+          <input type="submit" value="x">
+        }
+      </li>
+    }
+  </ul>
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.MachineId)
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+    <input type="submit" value="Save" />
+  }
+</main>
+<footer>
+  <p>@Html.ActionLink("Machine List", "Index")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+</footer>
