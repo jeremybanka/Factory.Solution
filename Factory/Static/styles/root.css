@@ -153,7 +153,6 @@
           align-items: center;
   min-width: 60vw;
   max-width: calc(100vw - 100px);
-  max-height: 60vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
